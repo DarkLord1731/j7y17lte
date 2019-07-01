@@ -173,8 +173,9 @@ static ssize_t mip4_tk_fw_update(struct device *dev, struct device_attribute *at
 
 	memset(info->print_buf, 0, PAGE_SIZE);
 
+	info->firmware_state = 1;
+
 	switch(*buf) {
-		info->firmware_state = 1;
 	case 's':
 	case 'S':
 		result = mip4_tk_fw_update_from_kernel(info, true);

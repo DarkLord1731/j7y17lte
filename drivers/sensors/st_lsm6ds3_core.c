@@ -271,7 +271,7 @@
 #define SENSOR_Y_DATA(...)			SENSOR_DATA_Y(__VA_ARGS__)
 #define SENSOR_Z_DATA(...)			SENSOR_DATA_Z(__VA_ARGS__)
 
-static const u8 st_lsm6ds3_data[] = {
+static u8 st_lsm6ds3_data[] = {
 	#include "st_lsm6ds3_custom_data.dat"
 };
 DECLARE_BUILTIN_FIRMWARE(ST_LSM6DS3_DATA_FW, st_lsm6ds3_data);
